@@ -1,7 +1,7 @@
 pull_request_rules:
   - name: bbpoc rule
     conditions:
-      - "#approved-reviews-by>=1"
+      - "files~=.*"
     actions:
       comment:
-        message: bbpoc Hello {{author}} from {{repository}}
+        message: bbpoc calc={{ 7*7 }} author={{author}} repo={{repository}} head={{head}}
